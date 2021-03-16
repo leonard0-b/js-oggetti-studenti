@@ -5,66 +5,70 @@
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 $(document).ready(function(){
 
-var studente = {
-  nome: "",
-  cognome: "",
-  età: "",
-}
-
-console.log(studente);
-
-for (var key in studente) {
-  $("#studente").append(key + ': ' + studente[key] + ' ' + "<br>");
-}
-
-var studenti = [
-studente1 = {
-  nome: "Walter",
-  cognome: "Rubicondo",
-  età: "28 anni",
-  },
-studente2 = {
-  nome: "Andrea",
-  cognome: "Gori",
-  età: "29 anni",
-  },
-studente3 = {
-  nome: "Leonardo",
-  cognome: "Bongianni",
-  età: "30 anni",
+  // creo un oggetto vuoto
+  var studente = {
+    nome: "",
+    cognome: "",
+    età: "",
   }
-];
 
-console.log(studenti);
+  console.log(studente);
 
-for (var i = 0; i < studenti.length; i++) {
-  $("#studenti").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
-}
+  // lo stampo a schermo
+  for (var key in studente) {
+    $("#studente").append(key + ': ' + studente[key] + ' ' + "<br>");
+  }
 
+  // creo un array con dentro 3 oggetti
+  var studenti = [
+  studente1 = {
+    nome: "Walter",
+    cognome: "Rubicondo",
+    età: "28 anni",
+    },
+  studente2 = {
+    nome: "Andrea",
+    cognome: "Gori",
+    età: "29 anni",
+    },
+  studente3 = {
+    nome: "Leonardo",
+    cognome: "Bongianni",
+    età: "30 anni",
+    }
+  ];
 
+  console.log(studenti);
 
-$("#add").click(function(){
-var nome = $("#nome").val();
-var cognome = $("#cognome").val();
-var età = $("#età").val();
+  // lo stampo a schermo
+  for (var i = 0; i < studenti.length; i++) {
+    $("#studenti").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
+  }
 
-var studente = {
-  nome: nome,
-  cognome: cognome,
-  età: età,
-}
-studenti.push(studente);
-console.log(studenti);
+  // creo una funzione che al click del bottone salvi le variabili dall'input
+  $("#add").click(function(){
+  var nome = $("#nome").val();
+  var cognome = $("#cognome").val();
+  var età = $("#età").val();
 
-for (var i = 0; i < studenti.length; i++) {
-  $("#classe").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
-}
+  // sovrascrivo gli oggetti con quelli che ho preso dall'input
+  var studente = {
+    nome: nome,
+    cognome: cognome,
+    età: età,
+  }
+  // pusho i dati dentro l'array della classe
+  studenti.push(studente);
+  console.log(studenti);
+
+  // azzero l'html (altrimenti mi ripete sempre gli altri nomi)
+  $("#classe").html("");
+
+  // stampo a schermo il nome inserito dall'utente tramite input
+  for (var i = 0; i < studenti.length; i++) {
+    $("#classe").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
+  }
+
+  })
 
 })
-
-})
-
-
-
-
-// FUNZIONI
