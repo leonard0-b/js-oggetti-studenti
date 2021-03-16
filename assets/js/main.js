@@ -37,11 +37,6 @@ studente3 = {
 
 console.log(studenti);
 
-for (var i = 0; i < studenti.length; i++) {
-  for (var key in studenti[i]) {
-    $("#classe").append(key, studenti[key]);
-  }
-}
 
 $("#add").click(function(){
 var nome = $("#nome").val();
@@ -56,9 +51,14 @@ var studente = {
 studenti.push(studente);
 console.log(studenti);
 
+for (var i = 0; i < studenti.length; i++) {
+  $("#classe").append("<p>" + studenti[i].nome + " " + studenti[i].cognome + "</p>")
+}
+
 })
 
 })
+
 
 
 
