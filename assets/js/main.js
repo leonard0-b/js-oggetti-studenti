@@ -5,7 +5,7 @@
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 $(document).ready(function(){
 
-  // creo un oggetto vuoto
+  // creo un oggetto vuoto🐱‍👤
   var studente = {
     nome: "",
     cognome: "",
@@ -14,12 +14,12 @@ $(document).ready(function(){
 
   console.log(studente);
 
-  // lo stampo a schermo
+  // lo stampo a schermo🐱‍👤
   for (var key in studente) {
     $("#studente").append(key + ': ' + studente[key] + ' ' + "<br>");
   }
 
-  // creo un array con dentro 3 oggetti
+  // creo un array con dentro 3 oggetti🐱‍👤
   var studenti = [
   studente1 = {
     nome: "Walter",
@@ -40,31 +40,31 @@ $(document).ready(function(){
 
   console.log(studenti);
 
-  // lo stampo a schermo
+  // lo stampo a schermo🐱‍👤
   for (var i = 0; i < studenti.length; i++) {
     $("#studenti").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
   }
 
-  // creo una funzione che al click del bottone salvi le variabili dall'input
+  // creo una funzione che al click del bottone salvi le variabili dall'input🐱‍👤
   $("#add").click(function(){
   var nome = $("#nome").val();
   var cognome = $("#cognome").val();
   var età = $("#età").val();
 
-  // sovrascrivo gli oggetti con quelli che ho preso dall'input
+  // sovrascrivo gli oggetti con quelli che ho preso dall'input🐱‍👤
   var studente = {
     nome: nome,
     cognome: cognome,
     età: età,
   }
-  // pusho i dati dentro l'array della classe
+  // pusho i dati dentro l'array della classe🐱‍👤
   studenti.push(studente);
   console.log(studenti);
 
-  // azzero l'html (altrimenti mi ripete sempre gli altri nomi)
+  // azzero l'html (altrimenti mi ripete sempre gli altri nomi)🐱‍👤
   $("#classe").html("");
 
-  // stampo a schermo il nome inserito dall'utente tramite input
+  // stampo a schermo il nome inserito dall'utente tramite input🐱‍👤
   for (var i = 0; i < studenti.length; i++) {
     $("#classe").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
   }
