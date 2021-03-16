@@ -37,6 +37,11 @@ studente3 = {
 
 console.log(studenti);
 
+for (var i = 0; i < studenti.length; i++) {
+  $("#studenti").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
+}
+
+
 
 $("#add").click(function(){
 var nome = $("#nome").val();
@@ -52,7 +57,7 @@ studenti.push(studente);
 console.log(studenti);
 
 for (var i = 0; i < studenti.length; i++) {
-  $("#classe").append("<p>" + studenti[i].nome + " " + studenti[i].cognome + "</p>")
+  $("#classe").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
 }
 
 })
