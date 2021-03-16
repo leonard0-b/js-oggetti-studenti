@@ -11,12 +11,10 @@ var studente = {
   età: "",
 }
 
-
 console.log(studente);
 
 for (var key in studente) {
-  console.log(key, studente[key]);
-  $("p").text(key, studente[key]);
+  $("#studente").append(key + ': ' + studente[key] + ' ' + "<br>");
 }
 
 var studenti = [
@@ -39,8 +37,26 @@ studente3 = {
 
 console.log(studenti);
 
+for (var i = 0; i < studenti.length; i++) {
+  for (var key in studenti[i]) {
+    $("#classe").append(key, studenti[key]);
+  }
+}
 
+$("#add").click(function(){
+var nome = $("#nome").val();
+var cognome = $("#cognome").val();
+var età = $("#età").val();
 
+var studente = {
+  nome: nome,
+  cognome: cognome,
+  età: età,
+}
+studenti.push(studente);
+console.log(studenti);
+
+})
 
 })
 
