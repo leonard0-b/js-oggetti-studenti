@@ -5,34 +5,32 @@
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 $(document).ready(function(){
 
-var studente = [
-  {
+var studente = {
   nome: "",
   cognome: "",
   età: "",
-  }
-]
+}
+
 
 console.log(studente);
 
-for (var i = 0; i < studente.length; i++) {
-  for (var key in studente[i]) {
-    $("p").text(studente[i]);
-  }
+for (var key in studente) {
+  console.log(key, studente[key]);
+  $("p").text(key, studente[key]);
 }
 
 var studenti = [
-  {
+studente1 = {
   nome: "Walter",
   cognome: "Rubicondo",
   età: "28 anni",
   },
-  {
+studente2 = {
   nome: "Andrea",
   cognome: "Gori",
   età: "29 anni",
   },
-  {
+studente3 = {
   nome: "Leonardo",
   cognome: "Bongianni",
   età: "30 anni",
