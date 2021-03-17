@@ -9,13 +9,14 @@ $(document).ready(function(){
   var studente = {
     nome: "",
     cognome: "",
-    età: "",
+    eta: "",
   }
 
   console.log(studente);
 
   // lo stampo a schermo🐱‍👤
   for (var key in studente) {
+    console.log(studente[key]);
     $("#studente").append(key + ': ' + studente[key] + ' ' + "<br>");
   }
 
@@ -24,21 +25,20 @@ $(document).ready(function(){
   studente1 = {
     nome: "Walter",
     cognome: "Rubicondo",
-    età: "28 anni",
+    eta: "28 anni",
     },
   studente2 = {
     nome: "Andrea",
     cognome: "Gori",
-    età: "29 anni",
+    eta: "29 anni",
     },
   studente3 = {
     nome: "Leonardo",
     cognome: "Bongianni",
-    età: "30 anni",
+    eta: "30 anni",
     }
   ];
 
-  console.log(studenti);
 
   // lo stampo a schermo🐱‍👤
   for (var i = 0; i < studenti.length; i++) {
@@ -47,16 +47,13 @@ $(document).ready(function(){
 
   // creo una funzione che al click del bottone salvi le variabili dall'input🐱‍👤
   $("#add").click(function(){
-  var nome = $("#nome").val();
-  var cognome = $("#cognome").val();
-  var età = $("#età").val();
+  var studente = {};
+
+  studente.nome = $("#nome").val();
+  studente.cognome = $("#cognome").val();
+  studente.eta = $("#età").val();
 
   // sovrascrivo gli oggetti con quelli che ho preso dall'input🐱‍👤
-  var studente = {
-    nome: nome,
-    cognome: cognome,
-    età: età,
-  }
   // pusho i dati dentro l'array della classe🐱‍👤
   studenti.push(studente);
   console.log(studenti);
