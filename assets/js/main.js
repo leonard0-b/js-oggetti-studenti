@@ -42,7 +42,7 @@ $(document).ready(function(){
 
   // lo stampo a schermo🐱‍👤
   for (var i = 0; i < studenti.length; i++) {
-    $("#studenti").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
+    $("#studenti").append("<li>" + studenti[i].nome + " " + studenti[i].cognome + "</li>")
   }
 
   // creo una funzione che al click del bottone salvi le variabili dall'input🐱‍👤
@@ -66,9 +66,8 @@ $(document).ready(function(){
 
   // stampo a schermo il nome inserito dall'utente tramite input🐱‍👤
   for (var i = 0; i < studenti.length; i++) {
-    $("#classe").append(studenti[i].nome + " " + studenti[i].cognome + "<br>")
+    $("#classe").append("<li>" + studenti[i].nome + " " + studenti[i].cognome + "</li>")
   }
 
   })
-
 })
